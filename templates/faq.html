@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Справка — Molven RP{% endblock %}
+
+{% block content %}
+<section class="help-section">
+  <section class="hero-sections">
+    <div class="hero-boxs">
+      <h1>FAQ</h1>
+      <p class="muted">Ответы на частые вопросы, инструкции и советы для игроков</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="topbar">
+      <input id="search" class="search" type="search" placeholder="Поиск по вопросам..." aria-label="Поиск по вопросам">
+      <select id="category" class="category" aria-label="Фильтр по категории">
+        <option value="all">Все категории</option>
+        <option value="account">Аккаунт и авторизация</option>
+        <option value="rules">Правила и поведение</option>
+        <option value="technical">Технические проблемы</option>
+        <option value="gameplay">Игровой процесс и команды</option>
+        <option value="support">Поддержка и жалобы</option>
+      </select>
+    </div>
+
+    <section id="faqs">
+      <div class="faq-list">
+        <!-- АККАУНТ -->
+        <article class="card" data-category="account">
+          <details>
+            <summary>Как создать аккаунт на сервере?</summary>
+            <div class="meta">Категория: Аккаунт и авторизация</div>
+            <p>Создайте аккаунт прямо в игре или через сайт.  
+            Укажите никнейм, надёжный пароль и при необходимости подтвердите почту.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="account">
+          <details>
+            <summary>Я забыл пароль — как восстановить?</summary>
+            <div class="meta">Категория: Аккаунт и авторизация</div>
+            <p>Используйте кнопку «Забыли пароль» или обратитесь в поддержку.  
+            Подготовьте доказательства владения аккаунтом (например, дата регистрации или история доната).</p>
+          </details>
+        </article>
+
+        <!-- ПРАВИЛА -->
+        <article class="card" data-category="rules">
+          <details>
+            <summary>Где прочитать правила сервера?</summary>
+            <div class="meta">Категория: Правила и поведение</div>
+            <p>Правила доступны на форуме: <a class="btn" href="https://forum.molven-rp.com" target="_blank">Перейти на форум</a></p>
+          </details>
+        </article>
+
+        <article class="card" data-category="rules">
+          <details>
+            <summary>Как подать апелляцию на бан?</summary>
+            <div class="meta">Категория: Правила и поведение</div>
+            <p>Отправьте заявку через форму поддержки, указав ник, причину и доказательства.  
+            Решение принимается индивидуально.</p>
+          </details>
+        </article>
+
+        <!-- ТЕХНИЧЕСКИЕ -->
+        <article class="card" data-category="technical">
+          <details>
+            <summary>Минимальные требования и подключение к серверу</summary>
+            <div class="meta">Категория: Технические проблемы</div>
+            <p>Убедитесь, что версия клиента CRMP совпадает с версией сервера.  
+            Установите патчи и используйте актуальный IP. Если не подключается — временно отключите антивирус.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="technical">
+          <details>
+            <summary>Игра вылетает или появляются ошибки плагинов</summary>
+            <div class="meta">Категория: Технические проблемы</div>
+            <p>Проверьте логи клиента и обновите драйверы.  
+            Если ошибка повторяется — отправьте отчёт с логами в поддержку.</p>
+          </details>
+        </article>
+
+        <!-- ГЕЙМПЛЕЙ -->
+        <article class="card" data-category="gameplay">
+          <details>
+            <summary>Как купить или хранить транспорт?</summary>
+            <div class="meta">Категория: Игровой процесс и команды</div>
+            <p>Покупка транспорта доступна в автосалоне или через <code>/buy</code>.  
+            Храните авто в гараже или на парковке — оставленные машины могут быть удалены.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="gameplay">
+          <details>
+            <summary>Основные команды игрока</summary>
+            <div class="meta">Категория: Игровой процесс и команды</div>
+            <p><code>/help</code>, <code>/report</code>, <code>/rules</code>, <code>/me</code>, <code>/ooc</code>.  
+            Полный список — в игре через <code>/commands</code>.</p>
+          </details>
+        </article>
+
+        <!-- ПОДДЕРЖКА -->
+        <article class="card" data-category="support">
+          <details>
+            <summary>Как сообщить о баге или ошибке?</summary>
+            <div class="meta">Категория: Поддержка и жалобы</div>
+            <p>Используйте форму на сайте или команду <code>/report</code> в игре.  
+            Укажите шаги, скриншоты и время возникновения.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="support">
+          <details>
+            <summary>Как связаться с поддержкой?</summary>
+            <div class="meta">Категория: Поддержка и жалобы</div>
+            <p>Через Discord, сайт или команду <code>/report</code> в игре.  
+            Подробно опишите проблему и дождитесь ответа.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="card contact-card">
+      <strong>Не нашли нужный ответ?</strong>
+      <p class="meta">Свяжитесь с нашей командой поддержки:</p>
+        <li>Форум: <a class="btn" href="https://forum.molven-rp.com" target="_blank">Перейти на форум</a></li>
+        <li>Поддержка: <a class="btn" href="/support">Перейти</a></li>
+        <li>В игре: команда <code>/report</code></li>
+    </section>
+  </main>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const search = document.getElementById("search");
+  const category = document.getElementById("category");
+  const cards = [...document.querySelectorAll(".faq-list .card")];
+  const normalize = s => s.trim().toLowerCase();
+
+  function filter() {
+    const q = normalize(search.value);
+    const cat = category.value;
+    cards.forEach(card => {
+      const text = normalize(card.textContent);
+      const matchesQuery = !q || text.includes(q);
+      const matchesCat = cat === "all" || card.dataset.category === cat;
+      card.style.display = matchesQuery && matchesCat ? "" : "none";
+    });
+  }
+
+  search.addEventListener("input", filter);
+  category.addEventListener("change", filter);
+});
+</script>
+{% endblock %}

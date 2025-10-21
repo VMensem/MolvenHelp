@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Справка — Molven RP{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-box">
+    <h1>Центр помощи Molven RolePlay</h1>
+    <p class="lead">Инструкции, советы и решения проблем для игроков Molven RP.</p>
+  </div>
+</section>
+
+<div class="container help-center">
+  <div class="help-grid">
+
+    <a href="/start" class="help-card">
+      <div class="card-icon">🚀</div>
+      <h2>Как начать играть</h2>
+      <p>Пошаговое руководство по установке и запуску через лаунчер Molven RP.</p>
+    </a>
+
+    <a href="/faq" class="help-card">
+      <div class="card-icon">📖</div>
+      <h2>Частые вопросы</h2>
+      <p>Ответы на популярные вопросы игроков и советы по игре.</p>
+    </a>
+
+    <a href="/errors" class="help-card">
+      <div class="card-icon">⚠️</div>
+      <h2>Ошибки и решения</h2>
+      <p>Решения распространённых проблем при запуске и в процессе игры.</p>
+    </a>
+
+    <a href="https://forum.molven-rp.com" target="_blank" class="help-card">
+      <div class="card-icon">💬</div>
+      <h2>Форум проекта</h2>
+      <p>Общайтесь с игроками, задавайте вопросы и следите за новостями Molven RP.</p>
+    </a>
+
+    <a href="https://molven-rp.com" target="_blank" class="help-card">
+      <div class="card-icon">🌐</div>
+      <h2>Сайт проекта</h2>
+      <p>Посетите официальный сайт Molven RP — новости, обновления и многое другое.</p>
+    </a>
+
+    <a href="/support" target="_blank" class="help-card">
+      <div class="card-icon">📢</div>
+      <h2>Поддержка</h2>
+      <p>Следите за Molven RP в Discord и Telegram, участвуйте в обсуждениях и ивентах.</p>
+    </a>
+
+  </div>
+</div>
+<section class="contact-footer">
+  <div class="contact-box">
+    <h3>Нужна помощь?</h3>
+    <p>Если вы не нашли ответ — обратитесь в поддержку, мы всегда поможем!</p>
+    <a href="/support" target="_blank" class="btn-main">Связаться с поддержкой</a>
+  </div>
+</section>
+{% endblock %}
